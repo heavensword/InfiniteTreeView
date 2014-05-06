@@ -1,8 +1,8 @@
 //
 //  ITTXibView.m
-//  iTotemFrame
+//  Sword
 //
-//  Created by jack 廉洁 on 3/9/12.
+//  Created by Sword on 3/9/12.
 //  Copyright (c) 2012 iTotemStudio. All rights reserved.
 //
 
