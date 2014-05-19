@@ -259,6 +259,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Sword;
 				TargetAttributes = {
+					50B487C21918CBEC0088C558 = {
+						DevelopmentTeam = 7H6JCDHBVJ;
+					};
 					50B487E31918CBEC0088C558 = {
 						TestTargetID = 50B487C21918CBEC0088C558;
 					};
@@ -446,10 +449,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: LI XIAO (MK636A256V)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI XIAO (MK636A256V)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InfiniteTreeView/InfiniteTreeView-Prefix.pch";
 				INFOPLIST_FILE = "InfiniteTreeView/InfiniteTreeView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A27013FD-3C92-4288-A1E2-F39C23C5B265";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -459,10 +465,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Beijing iTotem Tech Co., Ltd.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Beijing iTotem Tech Co., Ltd.";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InfiniteTreeView/InfiniteTreeView-Prefix.pch";
 				INFOPLIST_FILE = "InfiniteTreeView/InfiniteTreeView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D69A7E45-15EA-4CA2-8425-E99FA0CCBEA0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -526,6 +535,7 @@
 				50B487F71918CBEC0088C558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50B487F81918CBEC0088C558 /* Build configuration list for PBXNativeTarget "InfiniteTreeViewTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +544,7 @@
 				50B487FA1918CBEC0088C558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
