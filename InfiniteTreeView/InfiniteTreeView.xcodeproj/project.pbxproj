@@ -449,13 +449,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: LI XIAO (MK636A256V)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: LI XIAO (MK636A256V)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Scott Lee (94JG5K3RP2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Scott Lee (94JG5K3RP2)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InfiniteTreeView/InfiniteTreeView-Prefix.pch";
 				INFOPLIST_FILE = "InfiniteTreeView/InfiniteTreeView-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A27013FD-3C92-4288-A1E2-F39C23C5B265";
+				PROVISIONING_PROFILE = "1073289A-D070-4D04-BDD5-91C29B3DC8AA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
