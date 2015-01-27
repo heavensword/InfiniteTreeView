@@ -9,7 +9,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "InfiniteTreeView/PushTree/InfiniteTreeView.m"
+            filePath = "InfiniteTreeView/PushTree/ZHJInfiniteTreeView.m"
             timestampString = "421060348.503962"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

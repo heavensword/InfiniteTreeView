@@ -3,17 +3,17 @@
 //  Sword
 //
 //  Created by Sword on 14-4-9.
-//  Copyright (c) 2014年 KSY. All rights reserved.
+//  Copyright (c) 2014年 Sword. All rights reserved.
 //
 
-#import "InfiniteTreeTableView.h"
+#import "ZHJInfiniteTreeTableView.h"
 
-@interface InfiniteTreeTableView()
+@interface ZHJInfiniteTreeTableView()
 {
 }
 @end
 
-@implementation InfiniteTreeTableView
+@implementation ZHJInfiniteTreeTableView
 
 - (id)initWithFrame:(CGRect)frame
 {

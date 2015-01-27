@@ -3,10 +3,10 @@
 //  Sword
 //
 //  Created by Sword on 3/15/12.
-//  Copyright (c) 2012 iTotemStudio. All rights reserved.
+//  Copyright (c) 2012 Sword. All rights reserved.
 //
 
-#import "UIView+ITTAdditions.h"
+#import "UIView+Additions.h"
 
 UIInterfaceOrientation ITTInterfaceOrientation() {
     UIInterfaceOrientation orient = [UIApplication sharedApplication].statusBarOrientation;

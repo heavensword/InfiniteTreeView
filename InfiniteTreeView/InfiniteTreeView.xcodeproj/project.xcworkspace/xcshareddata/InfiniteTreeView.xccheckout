@@ -10,29 +10,29 @@
 	<string>InfiniteTreeView</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>186AE2AE-EB38-4963-8E5C-894E4641495E</key>
+		<key>A16839E32A5023058F6D7ACF0199095131F58398</key>
 		<string>https://github.com/heavensword/InfiniteTreeView.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>InfiniteTreeView/InfiniteTreeView.xcodeproj/project.xcworkspace</string>
+	<string>InfiniteTreeView/InfiniteTreeView.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>186AE2AE-EB38-4963-8E5C-894E4641495E</key>
+		<key>A16839E32A5023058F6D7ACF0199095131F58398</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/heavensword/InfiniteTreeView.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>186AE2AE-EB38-4963-8E5C-894E4641495E</string>
+	<string>A16839E32A5023058F6D7ACF0199095131F58398</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>186AE2AE-EB38-4963-8E5C-894E4641495E</string>
+			<string>A16839E32A5023058F6D7ACF0199095131F58398</string>
 			<key>IDESourceControlWCCName</key>
 			<string>InfiniteTreeView</string>
 		</dict>

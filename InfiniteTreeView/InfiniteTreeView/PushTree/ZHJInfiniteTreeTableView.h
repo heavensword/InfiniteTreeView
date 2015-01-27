@@ -3,12 +3,12 @@
 //  Sword
 //
 //  Created by Sword on 14-4-9.
-//  Copyright (c) 2014年 KSY. All rights reserved.
+//  Copyright (c) 2014年 Sword. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface InfiniteTreeTableView : UITableView
+@interface ZHJInfiniteTreeTableView : UITableView
 
 @property (nonatomic, assign) NSInteger level;
 

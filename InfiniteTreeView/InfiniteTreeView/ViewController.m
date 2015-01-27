@@ -7,13 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "InfiniteTreeView.h"
+#import "ZHJInfiniteTreeView.h"
 #import "UserInfoCell.h"
 #import "User.h"
 
 @interface ViewController ()<PushTreeViewDataSource, PushTreeViewDelegate>
 {
-    InfiniteTreeView *_pushTreeView;
+    ZHJInfiniteTreeView *_pushTreeView;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
@@ -27,7 +27,7 @@
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    _pushTreeView = [InfiniteTreeView loadFromXib];
+    _pushTreeView = [ZHJInfiniteTreeView loadFromXib];
     _pushTreeView.frame = self.containerView.bounds;
     _pushTreeView.dataSource = self;
     _pushTreeView.delegate = self;
@@ -52,7 +52,7 @@
     return level * section + 1;
 }
 
-- (InfiniteTreeBaseCell *)pushTreeView:(InfiniteTreeView *)pushTreeView level:(NSInteger)level indexPath:(NSIndexPath*)indexPath
+- (ZHJInfiniteTreeBaseCell *)pushTreeView:(ZHJInfiniteTreeView *)pushTreeView level:(NSInteger)level indexPath:(NSIndexPath*)indexPath
 {
     static NSString *identifier = @"UserInfoCell";
     UserInfoCell *cell = (UserInfoCell*)[pushTreeView dequeueReusableCellWithIdentifier:identifier];
@@ -64,12 +64,12 @@
 }
 
 #pragma mark - PushTreeViewDelegate
-- (void)pushTreeView:(InfiniteTreeView *)pushTreeView didSelectedLevel:(NSInteger)level indexPath:(NSIndexPath*)indexPath
+- (void)pushTreeView:(ZHJInfiniteTreeView *)pushTreeView didSelectedLevel:(NSInteger)level indexPath:(NSIndexPath*)indexPath
 {
 
 }
 
-- (UIView *)pushTreeView:(InfiniteTreeView *)pushTreeView level:(NSInteger)level viewForHeaderInSection:(NSInteger)section
+- (UIView *)pushTreeView:(ZHJInfiniteTreeView *)pushTreeView level:(NSInteger)level viewForHeaderInSection:(NSInteger)section
 {
     CGFloat headerHeight = 24;
     UIView *headerview = nil;
@@ -84,17 +84,17 @@
     return headerview;
 }
 
-- (CGFloat)pushTreeView:(InfiniteTreeView *)pushTreeView level:(NSInteger)level heightForHeaderInSection:(NSInteger)section
+- (CGFloat)pushTreeView:(ZHJInfiniteTreeView *)pushTreeView level:(NSInteger)level heightForHeaderInSection:(NSInteger)section
 {
     return 24;
 }
 
-- (CGFloat)pushTreeView:(InfiniteTreeView *)pushTreeView level:(NSInteger)level heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)pushTreeView:(ZHJInfiniteTreeView *)pushTreeView level:(NSInteger)level heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 55;
 }
 
-- (BOOL)pushTreeViewHasNextLevel:(InfiniteTreeView *)pushTreeView currentLevel:(NSInteger)level indexPath:(NSIndexPath*)indexPath
+- (BOOL)pushTreeViewHasNextLevel:(ZHJInfiniteTreeView *)pushTreeView currentLevel:(NSInteger)level indexPath:(NSIndexPath*)indexPath
 {
     BOOL next = TRUE;
     if (level == 2 && indexPath.section == 1) {
@@ -103,7 +103,7 @@
     return next;
 }
 
-- (void)pushTreeViewWillReloadAtLevel:(InfiniteTreeView*)pushTreeView currentLevel:(NSInteger)currentLevel level:(NSInteger)level                            indexPath:(NSIndexPath*)indexPath
+- (void)pushTreeViewWillReloadAtLevel:(ZHJInfiniteTreeView*)pushTreeView currentLevel:(NSInteger)currentLevel level:(NSInteger)level                            indexPath:(NSIndexPath*)indexPath
 {
     NSLog(@"current level %ld level %ld", currentLevel, level);
 }

@@ -3,12 +3,12 @@
 //  Sword
 //
 //  Created by Sword on 3/9/12.
-//  Copyright (c) 2012 iTotemStudio. All rights reserved.
+//  Copyright (c) 2012 Sword. All rights reserved.
 //
 
-#import "ITTXibView.h"
+#import "ZHJXibView.h"
 
-@implementation ITTXibView
+@implementation ZHJXibView
 
 - (void)dealloc
 {

@@ -3,18 +3,18 @@
 //  Sword
 //
 //  Created by Sword on 14-4-8.
-//  Copyright (c) 2014年 KSY. All rights reserved.
+//  Copyright (c) 2014年 Sword. All rights reserved.
 //
 
-#import "InfiniteTreeView.h"
-#import "InfiniteTreeBaseCell.h"
-#import "InfiniteTreeTableView.h"
+#import "ZHJInfiniteTreeView.h"
+#import "ZHJInfiniteTreeBaseCell.h"
+#import "ZHJInfiniteTreeTableView.h"
 
 //#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 
 #define SAME_INDEXPATH(i1, i2) (i1.section == i2.section && i1.row == i2.row)
 
-@interface InfiniteTreeView()<UITableViewDataSource, UITableViewDelegate>
+@interface ZHJInfiniteTreeView()<UITableViewDataSource, UITableViewDelegate>
 {
     BOOL            _animating;
     BOOL            _animated;
@@ -29,7 +29,7 @@
 }
 @end
 
-@implementation InfiniteTreeView
+@implementation ZHJInfiniteTreeView
 
 - (void)dealloc
 {
@@ -78,8 +78,8 @@
     _recyleTableViews = [[NSMutableSet alloc] init];
     NSInteger index = 0;
     for (UIView *subview in self.subviews) {
-        if ([subview isKindOfClass:[InfiniteTreeTableView class]]) {
-            InfiniteTreeTableView *treeTableView = (InfiniteTreeTableView*)subview;
+        if ([subview isKindOfClass:[ZHJInfiniteTreeTableView class]]) {
+            ZHJInfiniteTreeTableView *treeTableView = (ZHJInfiniteTreeTableView*)subview;
             if (0 == index) {
                 treeTableView.hidden = FALSE;
                 treeTableView.level = 0;
@@ -97,9 +97,9 @@
     }
 }
 
-- (InfiniteTreeTableView*)dequeueTableView
+- (ZHJInfiniteTreeTableView*)dequeueTableView
 {
-    InfiniteTreeTableView *tableView = [_recyleTableViews anyObject];
+    ZHJInfiniteTreeTableView *tableView = [_recyleTableViews anyObject];
     if (tableView) {
         [_recyleTableViews removeObject:tableView];
     }
@@ -108,10 +108,10 @@
     return tableView;
 }
 
-- (InfiniteTreeTableView*)tableViewWithLevel:(NSInteger)level
+- (ZHJInfiniteTreeTableView*)tableViewWithLevel:(NSInteger)level
 {
-    InfiniteTreeTableView *foundTableView = nil;
-    for (InfiniteTreeTableView *tableView in _tableViews) {
+    ZHJInfiniteTreeTableView *foundTableView = nil;
+    for (ZHJInfiniteTreeTableView *tableView in _tableViews) {
         if (tableView.level == level) {
             foundTableView = tableView;
             break;
@@ -136,7 +136,7 @@
 
 - (void)recyleTableViews:(BOOL)push
 {
-    InfiniteTreeTableView *recyleTableView = nil;
+    ZHJInfiniteTreeTableView *recyleTableView = nil;
     if (push) {
         if (_level >= 2) {
             recyleTableView = [self tableViewWithLevel:_level - 2];
@@ -156,7 +156,7 @@
     [self updateLineView];
 }
 
-- (void)applyNextAnimation:(InfiniteTreeTableView*)tableView currentLevel:(NSInteger)currentLevel
+- (void)applyNextAnimation:(ZHJInfiniteTreeTableView*)tableView currentLevel:(NSInteger)currentLevel
 {
     CGRect frame = tableView.frame;
     frame.origin.x = 320;
@@ -165,7 +165,7 @@
     
     frame.origin.x = 100;
     frame.size.width = 220;
-    InfiniteTreeTableView *currentTableView = [self tableViewWithLevel:currentLevel];
+    ZHJInfiniteTreeTableView *currentTableView = [self tableViewWithLevel:currentLevel];
     if (_animated) {
         [UIView animateWithDuration:0.3 animations:^{
             _lineView.left = 0;
@@ -189,12 +189,12 @@
     }
 }
 
-- (void)applyBackAnimation:(InfiniteTreeTableView*)tableView currentLevel:(NSInteger)currentLevel
+- (void)applyBackAnimation:(ZHJInfiniteTreeTableView*)tableView currentLevel:(NSInteger)currentLevel
 {
     tableView.hidden = FALSE;
-    InfiniteTreeTableView *lastTableView = [self tableViewWithLevel:currentLevel];
+    ZHJInfiniteTreeTableView *lastTableView = [self tableViewWithLevel:currentLevel];
     if (currentLevel >= 2) {
-        InfiniteTreeTableView *secondLastTableView = [self tableViewWithLevel:currentLevel - 1];
+        ZHJInfiniteTreeTableView *secondLastTableView = [self tableViewWithLevel:currentLevel - 1];
         CGRect secondFrame = secondLastTableView.frame;
         secondFrame.origin.x = 100;
         secondFrame.size.width = 220;
@@ -239,7 +239,7 @@
         }
         _currentReloadDataLevel = needReloadDataLevel;
         _level--;
-        InfiniteTreeTableView *tableView = [self tableViewWithLevel:needReloadDataLevel];
+        ZHJInfiniteTreeTableView *tableView = [self tableViewWithLevel:needReloadDataLevel];
         if (!tableView) {
             tableView = [self dequeueTableView];
         }
@@ -268,59 +268,59 @@
 
 - (void)reloadData
 {
-    for (InfiniteTreeTableView *pushTreeTableView in _tableViews) {
+    for (ZHJInfiniteTreeTableView *pushTreeTableView in _tableViews) {
         [pushTreeTableView reloadData];
     }
 }
 
 - (void)deselectRowAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated
 {
-    InfiniteTreeTableView *treeTableView = [self tableViewWithLevel:_currentReloadDataLevel];
+    ZHJInfiniteTreeTableView *treeTableView = [self tableViewWithLevel:_currentReloadDataLevel];
     [treeTableView deselectRowAtIndexPath:indexPath animated:animated];
 }
 
 - (void)selectedAtLevel:(NSInteger)level indexPath:(NSIndexPath*)indexPath animated:(BOOL)animated
 {
     _animated = animated;
-    InfiniteTreeTableView *treeTableView = [self tableViewWithLevel:_currentReloadDataLevel];
+    ZHJInfiniteTreeTableView *treeTableView = [self tableViewWithLevel:_currentReloadDataLevel];
     [treeTableView.delegate tableView:treeTableView didSelectRowAtIndexPath:indexPath];
 }
 
 - (void)registerClass:(Class)cellClass forCellReuseIdentifier:(NSString *)identifier level:(NSInteger)level
 {
-    InfiniteTreeTableView *treeTableView = [self tableViewWithLevel:level];
+    ZHJInfiniteTreeTableView *treeTableView = [self tableViewWithLevel:level];
     [treeTableView registerClass:cellClass forCellReuseIdentifier:identifier];
 }
 
 - (NSInteger)numberOfRowsInSection:(NSInteger)section
 {
-    InfiniteTreeTableView *treeTableView = [self tableViewWithLevel:_currentReloadDataLevel];
+    ZHJInfiniteTreeTableView *treeTableView = [self tableViewWithLevel:_currentReloadDataLevel];
     return [treeTableView numberOfRowsInSection:section];
 }
 
-- (InfiniteTreeBaseCell*)dequeueReusableCellWithIdentifier:(NSString*)identifier
+- (ZHJInfiniteTreeBaseCell*)dequeueReusableCellWithIdentifier:(NSString*)identifier
 {
-    InfiniteTreeTableView *treeTableView = [self tableViewWithLevel:_currentReloadDataLevel];
+    ZHJInfiniteTreeTableView *treeTableView = [self tableViewWithLevel:_currentReloadDataLevel];
     return [treeTableView dequeueReusableCellWithIdentifier:identifier];
 }
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    InfiniteTreeTableView *treeTableView = (InfiniteTreeTableView*)tableView;
+    ZHJInfiniteTreeTableView *treeTableView = (ZHJInfiniteTreeTableView*)tableView;
     return [_dataSource numberOfSectionsInLevel:treeTableView.level];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    InfiniteTreeTableView *treeTableView = (InfiniteTreeTableView*)tableView;
+    ZHJInfiniteTreeTableView *treeTableView = (ZHJInfiniteTreeTableView*)tableView;
     return [_dataSource numberOfRowsInLevel:treeTableView.level section:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    InfiniteTreeTableView *treeTableView = (InfiniteTreeTableView*)tableView;
-    InfiniteTreeBaseCell *cell = [_dataSource pushTreeView:self level:treeTableView.level indexPath:indexPath];
+    ZHJInfiniteTreeTableView *treeTableView = (ZHJInfiniteTreeTableView*)tableView;
+    ZHJInfiniteTreeBaseCell *cell = [_dataSource pushTreeView:self level:treeTableView.level indexPath:indexPath];
     if (_level == 0) {
         cell.width = 320;
     }
@@ -337,7 +337,7 @@
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    InfiniteTreeTableView *treeTableView = (InfiniteTreeTableView*)tableView;
+    ZHJInfiniteTreeTableView *treeTableView = (ZHJInfiniteTreeTableView*)tableView;
     if (_delegate && [_delegate respondsToSelector:@selector(pushTreeView:level:heightForHeaderInSection:)]) {
         return [_delegate pushTreeView:self level:treeTableView.level heightForHeaderInSection:section];
     }
@@ -346,7 +346,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    InfiniteTreeTableView *treeTableView = (InfiniteTreeTableView*)tableView;
+    ZHJInfiniteTreeTableView *treeTableView = (ZHJInfiniteTreeTableView*)tableView;
     if (_delegate && [_delegate respondsToSelector:@selector(pushTreeView:level:heightForRowAtIndexPath:)]) {
         return [_delegate pushTreeView:self level:treeTableView.level heightForRowAtIndexPath:indexPath];
     }
@@ -355,7 +355,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    InfiniteTreeTableView *treeTableView = (InfiniteTreeTableView*)tableView;
+    ZHJInfiniteTreeTableView *treeTableView = (ZHJInfiniteTreeTableView*)tableView;
     return [_delegate pushTreeView:self level:treeTableView.level viewForHeaderInSection:section];
 }
 
@@ -391,7 +391,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    InfiniteTreeTableView *treeTableView = (InfiniteTreeTableView*)tableView;
+    ZHJInfiniteTreeTableView *treeTableView = (ZHJInfiniteTreeTableView*)tableView;
     if (_delegate && [_delegate respondsToSelector:@selector(pushTreeView:didSelectedLevel:indexPath:)]) {
         [_delegate pushTreeView:self didSelectedLevel:treeTableView.level indexPath:indexPath];
     }
@@ -411,7 +411,7 @@
                 if (!SAME_INDEXPATH(_selectedIndexPath, indexPath)) {
                     _currentReloadDataLevel = treeTableView.level + 1;
                     [_delegate pushTreeViewWillReloadAtLevel:self currentLevel:treeTableView.level level:_currentReloadDataLevel indexPath:indexPath];
-                    InfiniteTreeTableView *tableView = [self tableViewWithLevel:_currentReloadDataLevel];
+                    ZHJInfiniteTreeTableView *tableView = [self tableViewWithLevel:_currentReloadDataLevel];
                     [tableView reloadData];
                     if (!tableView) {
                         _level++;
@@ -426,7 +426,7 @@
                 else {
                     _currentReloadDataLevel = treeTableView.level + 1;
                     [_delegate pushTreeViewWillReloadAtLevel:self currentLevel:treeTableView.level level:_currentReloadDataLevel indexPath:indexPath];
-                    InfiniteTreeTableView *tableView = [self tableViewWithLevel:_currentReloadDataLevel];
+                    ZHJInfiniteTreeTableView *tableView = [self tableViewWithLevel:_currentReloadDataLevel];
                     if (!tableView) {
                         _level++;
                         tableView = [self dequeueTableView];
@@ -449,7 +449,7 @@
                         currentLevel = 0;
                     }
                     [_delegate pushTreeViewWillReloadAtLevel:self currentLevel:treeTableView.level level:_currentReloadDataLevel indexPath:indexPath];
-                    InfiniteTreeTableView *tableView = [self tableViewWithLevel:_currentReloadDataLevel];
+                    ZHJInfiniteTreeTableView *tableView = [self tableViewWithLevel:_currentReloadDataLevel];
                     if (!tableView) {
                         tableView = [self dequeueTableView];
                     }
@@ -463,7 +463,7 @@
                 else {
                     _currentReloadDataLevel = treeTableView.level + 1;
                     [_delegate pushTreeViewWillReloadAtLevel:self currentLevel:treeTableView.level level:_currentReloadDataLevel indexPath:indexPath];
-                    InfiniteTreeTableView *tableView = [self tableViewWithLevel:_currentReloadDataLevel];
+                    ZHJInfiniteTreeTableView *tableView = [self tableViewWithLevel:_currentReloadDataLevel];
                     [tableView reloadData];
                     if (!tableView) {
                         _level++;

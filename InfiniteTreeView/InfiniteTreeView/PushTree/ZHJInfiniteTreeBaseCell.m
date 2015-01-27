@@ -3,12 +3,12 @@
 //  RongXin
 //
 //  Created by Sword on 14-4-8.
-//  Copyright (c) 2014年 KSY. All rights reserved.
+//  Copyright (c) 2014年 Sword. All rights reserved.
 //
 
-#import "InfiniteTreeBaseCell.h"
+#import "ZHJInfiniteTreeBaseCell.h"
 
-@implementation InfiniteTreeBaseCell
+@implementation ZHJInfiniteTreeBaseCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

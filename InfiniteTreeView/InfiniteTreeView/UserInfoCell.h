@@ -6,11 +6,11 @@
 //  Copyright (c) 2014年 Sword. All rights reserved.
 //
 
-#import "InfiniteTreeBaseCell.h"
+#import "ZHJInfiniteTreeBaseCell.h"
 
 @class User;
 
-@interface UserInfoCell : InfiniteTreeBaseCell
+@interface UserInfoCell : ZHJInfiniteTreeBaseCell
 
 @property (nonatomic, strong) User *user;
 

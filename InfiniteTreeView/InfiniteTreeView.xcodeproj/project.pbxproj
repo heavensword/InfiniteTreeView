@@ -21,12 +21,12 @@
 		50B487E81918CBEC0088C558 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B487CA1918CBEC0088C558 /* UIKit.framework */; };
 		50B487F01918CBEC0088C558 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50B487EE1918CBEC0088C558 /* InfoPlist.strings */; };
 		50B487F21918CBEC0088C558 /* InfiniteTreeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B487F11918CBEC0088C558 /* InfiniteTreeViewTests.m */; };
-		50B488031918CC090088C558 /* InfiniteTreeBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B487FD1918CC090088C558 /* InfiniteTreeBaseCell.m */; };
-		50B488041918CC090088C558 /* InfiniteTreeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B487FF1918CC090088C558 /* InfiniteTreeTableView.m */; };
-		50B488051918CC090088C558 /* InfiniteTreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B488011918CC090088C558 /* InfiniteTreeView.m */; };
-		50B488061918CC090088C558 /* InfiniteTreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50B488021918CC090088C558 /* InfiniteTreeView.xib */; };
-		50B4880D1918CC9E0088C558 /* ITTXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B488081918CC9E0088C558 /* ITTXibView.m */; };
-		50B4880F1918CC9E0088C558 /* UIView+ITTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4880C1918CC9E0088C558 /* UIView+ITTAdditions.m */; };
+		50B488031918CC090088C558 /* ZHJInfiniteTreeBaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B487FD1918CC090088C558 /* ZHJInfiniteTreeBaseCell.m */; };
+		50B488041918CC090088C558 /* ZHJInfiniteTreeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B487FF1918CC090088C558 /* ZHJInfiniteTreeTableView.m */; };
+		50B488051918CC090088C558 /* ZHJInfiniteTreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B488011918CC090088C558 /* ZHJInfiniteTreeView.m */; };
+		50B488061918CC090088C558 /* ZHJInfiniteTreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50B488021918CC090088C558 /* ZHJInfiniteTreeView.xib */; };
+		50B4880D1918CC9E0088C558 /* ZHJXibView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B488081918CC9E0088C558 /* ZHJXibView.m */; };
+		50B4880F1918CC9E0088C558 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4880C1918CC9E0088C558 /* UIView+Additions.m */; };
 		50B488111918CEA60088C558 /* datasource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50B488101918CEA60088C558 /* datasource.plist */; };
 		50B488141918D3AB0088C558 /* UserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B488131918D3AB0088C558 /* UserInfoCell.m */; };
 		50B488161918D3B30088C558 /* UserInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50B488151918D3B30088C558 /* UserInfoCell.xib */; };
@@ -63,17 +63,17 @@
 		50B487ED1918CBEC0088C558 /* InfiniteTreeViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InfiniteTreeViewTests-Info.plist"; sourceTree = "<group>"; };
 		50B487EF1918CBEC0088C558 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		50B487F11918CBEC0088C558 /* InfiniteTreeViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfiniteTreeViewTests.m; sourceTree = "<group>"; };
-		50B487FC1918CC090088C558 /* InfiniteTreeBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteTreeBaseCell.h; sourceTree = "<group>"; };
-		50B487FD1918CC090088C558 /* InfiniteTreeBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteTreeBaseCell.m; sourceTree = "<group>"; };
-		50B487FE1918CC090088C558 /* InfiniteTreeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteTreeTableView.h; sourceTree = "<group>"; };
-		50B487FF1918CC090088C558 /* InfiniteTreeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteTreeTableView.m; sourceTree = "<group>"; };
-		50B488001918CC090088C558 /* InfiniteTreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteTreeView.h; sourceTree = "<group>"; };
-		50B488011918CC090088C558 /* InfiniteTreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteTreeView.m; sourceTree = "<group>"; };
-		50B488021918CC090088C558 /* InfiniteTreeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfiniteTreeView.xib; sourceTree = "<group>"; };
-		50B488071918CC9E0088C558 /* ITTXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITTXibView.h; sourceTree = "<group>"; };
-		50B488081918CC9E0088C558 /* ITTXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITTXibView.m; sourceTree = "<group>"; };
-		50B4880B1918CC9E0088C558 /* UIView+ITTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ITTAdditions.h"; sourceTree = "<group>"; };
-		50B4880C1918CC9E0088C558 /* UIView+ITTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ITTAdditions.m"; sourceTree = "<group>"; };
+		50B487FC1918CC090088C558 /* ZHJInfiniteTreeBaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHJInfiniteTreeBaseCell.h; sourceTree = "<group>"; };
+		50B487FD1918CC090088C558 /* ZHJInfiniteTreeBaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHJInfiniteTreeBaseCell.m; sourceTree = "<group>"; };
+		50B487FE1918CC090088C558 /* ZHJInfiniteTreeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHJInfiniteTreeTableView.h; sourceTree = "<group>"; };
+		50B487FF1918CC090088C558 /* ZHJInfiniteTreeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHJInfiniteTreeTableView.m; sourceTree = "<group>"; };
+		50B488001918CC090088C558 /* ZHJInfiniteTreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHJInfiniteTreeView.h; sourceTree = "<group>"; };
+		50B488011918CC090088C558 /* ZHJInfiniteTreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHJInfiniteTreeView.m; sourceTree = "<group>"; };
+		50B488021918CC090088C558 /* ZHJInfiniteTreeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHJInfiniteTreeView.xib; sourceTree = "<group>"; };
+		50B488071918CC9E0088C558 /* ZHJXibView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHJXibView.h; sourceTree = "<group>"; };
+		50B488081918CC9E0088C558 /* ZHJXibView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHJXibView.m; sourceTree = "<group>"; };
+		50B4880B1918CC9E0088C558 /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		50B4880C1918CC9E0088C558 /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		50B488101918CEA60088C558 /* datasource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = datasource.plist; sourceTree = "<group>"; };
 		50B488121918D3AB0088C558 /* UserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoCell.h; sourceTree = "<group>"; };
 		50B488131918D3AB0088C558 /* UserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoCell.m; sourceTree = "<group>"; };
@@ -106,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50AA308A1A778086008C2103 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50B488181918D5590088C558 /* User.h */,
+				50B488191918D5590088C558 /* User.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		50B487BA1918CBEC0088C558 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +159,7 @@
 		50B487CD1918CBEC0088C558 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				50B488101918CEA60088C558 /* datasource.plist */,
 				50B487CE1918CBEC0088C558 /* InfiniteTreeView-Info.plist */,
 				50B487CF1918CBEC0088C558 /* InfoPlist.strings */,
 				50B487D21918CBEC0088C558 /* main.m */,
@@ -179,17 +189,17 @@
 		50B487FB1918CC090088C558 /* PushTree */ = {
 			isa = PBXGroup;
 			children = (
-				50B4880B1918CC9E0088C558 /* UIView+ITTAdditions.h */,
-				50B4880C1918CC9E0088C558 /* UIView+ITTAdditions.m */,
-				50B488071918CC9E0088C558 /* ITTXibView.h */,
-				50B488081918CC9E0088C558 /* ITTXibView.m */,
-				50B487FC1918CC090088C558 /* InfiniteTreeBaseCell.h */,
-				50B487FD1918CC090088C558 /* InfiniteTreeBaseCell.m */,
-				50B487FE1918CC090088C558 /* InfiniteTreeTableView.h */,
-				50B487FF1918CC090088C558 /* InfiniteTreeTableView.m */,
-				50B488001918CC090088C558 /* InfiniteTreeView.h */,
-				50B488011918CC090088C558 /* InfiniteTreeView.m */,
-				50B488021918CC090088C558 /* InfiniteTreeView.xib */,
+				50B4880B1918CC9E0088C558 /* UIView+Additions.h */,
+				50B4880C1918CC9E0088C558 /* UIView+Additions.m */,
+				50B488071918CC9E0088C558 /* ZHJXibView.h */,
+				50B488081918CC9E0088C558 /* ZHJXibView.m */,
+				50B487FC1918CC090088C558 /* ZHJInfiniteTreeBaseCell.h */,
+				50B487FD1918CC090088C558 /* ZHJInfiniteTreeBaseCell.m */,
+				50B487FE1918CC090088C558 /* ZHJInfiniteTreeTableView.h */,
+				50B487FF1918CC090088C558 /* ZHJInfiniteTreeTableView.m */,
+				50B488001918CC090088C558 /* ZHJInfiniteTreeView.h */,
+				50B488011918CC090088C558 /* ZHJInfiniteTreeView.m */,
+				50B488021918CC090088C558 /* ZHJInfiniteTreeView.xib */,
 			);
 			path = PushTree;
 			sourceTree = "<group>";
@@ -197,17 +207,15 @@
 		50B488171918D53C0088C558 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				50AA308A1A778086008C2103 /* Model */,
 				50B487D51918CBEC0088C558 /* AppDelegate.h */,
 				50B487D61918CBEC0088C558 /* AppDelegate.m */,
-				50B487D81918CBEC0088C558 /* Main.storyboard */,
-				50B487DB1918CBEC0088C558 /* ViewController.h */,
-				50B487DC1918CBEC0088C558 /* ViewController.m */,
 				50B488121918D3AB0088C558 /* UserInfoCell.h */,
 				50B488131918D3AB0088C558 /* UserInfoCell.m */,
 				50B488151918D3B30088C558 /* UserInfoCell.xib */,
-				50B488181918D5590088C558 /* User.h */,
-				50B488191918D5590088C558 /* User.m */,
-				50B488101918CEA60088C558 /* datasource.plist */,
+				50B487D81918CBEC0088C558 /* Main.storyboard */,
+				50B487DB1918CBEC0088C558 /* ViewController.h */,
+				50B487DC1918CBEC0088C558 /* ViewController.m */,
 			);
 			name = Demo;
 			sourceTree = "<group>";
@@ -291,7 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50B488061918CC090088C558 /* InfiniteTreeView.xib in Resources */,
+				50B488061918CC090088C558 /* ZHJInfiniteTreeView.xib in Resources */,
 				50B487DF1918CBEC0088C558 /* Images.xcassets in Resources */,
 				50B488161918D3B30088C558 /* UserInfoCell.xib in Resources */,
 				50B487D11918CBEC0088C558 /* InfoPlist.strings in Resources */,
@@ -316,13 +324,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				50B4881A1918D5590088C558 /* User.m in Sources */,
-				50B488051918CC090088C558 /* InfiniteTreeView.m in Sources */,
+				50B488051918CC090088C558 /* ZHJInfiniteTreeView.m in Sources */,
 				50B488141918D3AB0088C558 /* UserInfoCell.m in Sources */,
 				50B487DD1918CBEC0088C558 /* ViewController.m in Sources */,
-				50B488041918CC090088C558 /* InfiniteTreeTableView.m in Sources */,
-				50B488031918CC090088C558 /* InfiniteTreeBaseCell.m in Sources */,
-				50B4880F1918CC9E0088C558 /* UIView+ITTAdditions.m in Sources */,
-				50B4880D1918CC9E0088C558 /* ITTXibView.m in Sources */,
+				50B488041918CC090088C558 /* ZHJInfiniteTreeTableView.m in Sources */,
+				50B488031918CC090088C558 /* ZHJInfiniteTreeBaseCell.m in Sources */,
+				50B4880F1918CC9E0088C558 /* UIView+Additions.m in Sources */,
+				50B4880D1918CC9E0088C558 /* ZHJXibView.m in Sources */,
 				50B487D71918CBEC0088C558 /* AppDelegate.m in Sources */,
 				50B487D31918CBEC0088C558 /* main.m in Sources */,
 			);
