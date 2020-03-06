@@ -29,6 +29,7 @@
     
     _pushTreeView = [ZHJInfiniteTreeView loadFromXib];
     _pushTreeView.frame = self.containerView.bounds;
+    _pushTreeView.backgroundColor = [UIColor redColor];
     _pushTreeView.dataSource = self;
     _pushTreeView.delegate = self;
     [self.containerView addSubview:_pushTreeView];
